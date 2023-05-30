@@ -55,3 +55,10 @@ Route::get("/response/index", [App\Http\Controllers\BazmaController::class, 'res
 
 Route::get("/response/header", [App\Http\Controllers\BazmaController::class, 'responseHeader']);
 
+Route::get("/enkripsi/code", [App\Http\Controllers\BazmaController::class, ' encryptionData']);
+
+Route::get("/redirect/to", [App\Http\Controllers\BazmaController::class, 'redirectTo']);
+Route::get("/redirect/from", [App\Http\Controllers\BazmaController::class, 'redirectFrom']);
+
+Route::get("/redirect/to/nemed", [App\Http\Controllers\BazmaController::class, 'redirectToNamedRoute'])->name("redirect.to");
+Route::get("/redirect/from/named", [App\Http\Controllers\BazmaController::class, 'redirectFromNamedRoute']);
