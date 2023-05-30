@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BazmaController;
 use App\Http\Controllers\cobaController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,3 +44,14 @@ Route::get("/coba/example", [cobaController::class,"example"]);
 
 
 Route::get("/coba/requst", [cobaController::class, "requst"]);
+
+
+
+
+
+
+// Route::get("/response/index", [BazmaController::class, 'responseFunction']);
+Route::get("/response/index", [App\Http\Controllers\BazmaController::class, 'responseFunction']);
+
+Route::get("/response/header", [App\Http\Controllers\BazmaController::class, 'responseHeader']);
+
